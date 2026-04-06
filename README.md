@@ -1,83 +1,141 @@
-# 🐺 WOLF & VILLAIN - Premium Wealth Dashboard
+# Finance Dashboard UI
 
-Welcome to the **Wolf & Villain Finance Dashboard**, a state-of-the-art, high-performance financial management interface designed for elite wealth tracking. This project combines cutting-edge aesthetics with robust data visualization to provide a seamless financial overview.
+A responsive, component-driven Finance Dashboard built with React and Tailwind CSS to demonstrate UI architecture, state management, and data visualization using mock data.
 
-## 🚀 Project Journey: From Top to Bottom
-
-This project evolved through several critical phases to reach its current "Production-Ready" state:
-
-### 1. Foundation & Layout
-
-- Established a high-performance **React + Vite** architecture.
-- Developed a custom design system using **Tailwind CSS**, focusing on "Glassmorphism" and premium UI patterns.
-- Built a responsive grid layout that adapts to both desktop and mobile views.
-
-### 2. Localization & Currency (India Focused)
-
-- Fully localized the dashboard for the Indian market.
-- Integrated the **Indian Rupee (₹)** currency symbol across all components.
-- Implemented tabular numeric formatting for precise financial reporting.
-
-### 3. Personalization & Data Integrity
-
-- Customized the user profile for **Mariselvam A.** with unique identity markers.
-- Ensured **Exact Mathematical Consistency**: The total balance (`₹299,310.10`) is mathematically derived from current Income (`₹522,000.00`) and Expenses (`₹222,689.90`).
-- Implemented **Card Privacy**: Sensitive card numbers are masked for security simulation.
-
-### 4. Premium Theme Engine
-
-Developed a robust theme-switching engine with three distinct "Wolf" palettes:
-
-- **Wolf Carbon (Neon)**: High-contrast black/lime green for a modern tech feel.
-- **Wolf Arctic**: A sophisticated slate light mode for professional environments.
-- **Wolf Midnight**: A deep navy and rose palette for high-end luxury aesthetics.
-
-### 5. Final Branding & Assets
-
-- Integrated the **Wolf mascot logo** across the dashboard header.
-- Implemented a high-definition **SVG favicon** for enhanced browser tab branding.
-- Finalized "Wolf & Villain - Finance Dashboard" page titles and meta-structures.
-
-## 💎 Key Features
-
-- **Dynamic Financial Overview**: Real-time summary cards for Total Balance, Income, and Expenses.
-- **Interactive Data Visualization**:
-  - **Revenue Flow**: Weekly/Monthly bar charts showing income trends.
-  - **Expense Split**: Donut charts categorized by Rent, Shopping, and Investments.
-- **Smart Components**:
-  - **Transaction History**: Filterable list of recent financial activities.
-  - **My Cards**: A premium "Wolf Pay" virtual card interface with hover animations.
-  - **Subscription Tracker**: Manage recurring payments like Cloud, Office, and Entertainment.
-  - **AI Insights**: Automated financial health summaries and recommendations.
-- **Role Simulation**: Integrated **Admin/Viewer** toggle to test different permission-based UI states.
-
-## 🛠️ Technology Stack
-
-- **Core**: React 18 (Functional Components, Hooks, Context API)
-- **Build Tool**: Vite (Lightning-fast HMR and bundling)
-- **Styling**: Tailwind CSS (Custom configurations for themes and glass effects)
-- **Icons**: Lucide React (Clean, vector-based iconography)
-- **Charts**: Recharts (Customized for theme-consistent coloring)
-- **Typography**: Outfit (Google Fonts)
-
-## 📦 Getting Started
-
-To run the project locally:
-
-1. **Clone the repository**
-2. **Install dependencies**:
-   ```bash
-   npm install
-   ```
-3. **Run the development server**:
-   ```bash
-   npm run dev
-   ```
-4. **Build for production**:
-   ```bash
-   npm run build
-   ```
+This project is a **frontend-only assignment** focused on clean UI design, reusable components, and structured state flow rather than backend integration.
 
 ---
 
-_Created for the Assessment 1 - Wolf & Villain Finance Project._
+## 🔗 Live Demo
+
+Netlify: https://assignment-finance-dashboard-ui.netlify.app
+
+GitHub Repository: https://github.com/YOUR_USERNAME/finance-dashboard-ui
+
+---
+
+## 🧠 Objective
+
+The goal of this project is to demonstrate:
+
+- UI thinking and layout structure
+- Reusable component architecture
+- State management using Context API
+- Data visualization using charts
+- Role-based UI behavior
+- Responsive dashboard design
+- Clean and readable code structure
+
+---
+
+## ⚙️ Tech Stack
+
+| Technology   | Purpose                       |
+| ------------ | ----------------------------- |
+| React (Vite) | Frontend framework            |
+| Tailwind CSS | Styling and responsive layout |
+| Recharts     | Data visualization            |
+| Context API  | Global state management       |
+| Mock Data    | Simulated backend data        |
+
+---
+
+## ✨ Features Implemented
+
+- Dashboard summary cards (balance, stats)
+- Time-based visualization (revenue trend)
+- Categorical visualization (expense split)
+- Transaction list with filtering and sorting
+- Role-based UI (Admin / Viewer simulation)
+- Insights section
+- Modal interactions
+- Fully responsive layout
+- Modular component structure
+
+---
+
+## 🗂️ Project Structure
+
+```
+src/
+│
+├── components/
+│   ├── BalanceCard.jsx
+│   ├── ExpenseSplitChart.jsx
+│   ├── Header.jsx
+│   ├── InsightsCard.jsx
+│   ├── Modal.jsx
+│   ├── RevenueChart.jsx
+│   ├── StatsGrid.jsx
+│   └── TransactionSection.jsx
+│
+├── context/
+│   └── DashboardContext.jsx
+│
+├── App.jsx
+├── main.jsx
+└── index.css
+```
+
+---
+
+## 🧩 Architecture & Design Decisions
+
+- **Vite + React** chosen for fast development and minimal configuration.
+- **Tailwind CSS** used for rapid UI development and consistent design system.
+- **Context API** used for global state since this is a single dashboard application.
+- Components are broken down into **small reusable UI units** for scalability.
+- Mock data is centralized in context to simulate a real data layer.
+- Role-based UI is simulated to show how the interface adapts for different users.
+
+---
+
+## 🚧 Limitations
+
+- No backend/API integration (intentionally frontend-only)
+- No authentication or persistence
+- Uses mock data for demonstration
+
+The structure is designed so real APIs and authentication can be integrated easily.
+
+---
+
+## ▶️ Running Locally
+
+```bash
+npm install
+npm run dev
+```
+
+Build for production:
+
+```bash
+npm run build
+npm run preview
+```
+
+---
+
+## 🌍 Deployment
+
+This project is deployed using Netlify.
+
+Build settings used:
+
+- Build command: `npm run build`
+- Publish directory: `dist`
+
+---
+
+## 📌 Notes
+
+This dashboard is intentionally designed to highlight frontend engineering practices including component structure, state flow, and responsive UI rather than production-ready backend features.
+
+## 👨‍💻 Author
+
+**Mariselvam A**  
+Full Stack Developer
+
+- Portfolio: https://mariselvam-portfolio.netlify.app
+- GitHub: https://github.com/mariselvam-arumuganainar
+- LinkedIn: https://www.linkedin.com/in/mariselvam-a-/
