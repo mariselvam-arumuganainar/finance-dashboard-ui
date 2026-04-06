@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --transition-speed: 0.3s;
+}
+
+/* Global Scrollbar Hiding */
+* {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+*::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+/* Theme 1: Wolf Carbon (Original Dark) */
+.theme-neon {
+    --bg-darker: #0c0c10;
+    --bg-main: #111116;
+    --bg-card: #1c1c24;
+    --text-main: #ffffff;
+    --text-muted: #8a8a98;
+    --border-color: rgba(255, 255, 255, 0.05);
+    --primary: #dfff3b;
+    --primary-glow: rgba(223, 255, 59, 0.4);
+    --primary-soft: rgba(223, 255, 59, 0.1);
+    --accent: #ff8e4b;
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.08);
+}
+
+/* Theme 2: Wolf Arctic (Premium Light) */
+.theme-arctic {
+    --bg-darker: #f1f5f9;
+    --bg-main: #f8fafc;
+    --bg-card: #ffffff;
+    --text-main: #0f172a;
+    --text-muted: #475569; /* Slate 600 - darker for readability */
+    --border-color: rgba(15, 23, 42, 0.08);
+    --primary: #3b82f6;
+    --primary-glow: rgba(59, 130, 246, 0.3);
+    --primary-soft: rgba(59, 130, 246, 0.1);
+    --accent: #f59e0b;
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(15, 23, 42, 0.1);
+}
+
+/* Theme 3: Wolf Midnight (Deep Navy) */
+.theme-midnight {
+    --bg-darker: #020617;
+    --bg-main: #070e27;
+    --bg-card: #0f172a;
+    --text-main: #f1f5f9;
+    --text-muted: #94a3b8;
+    --border-color: rgba(255, 255, 255, 0.05);
+    --primary: #f43f5e;
+    --primary-glow: rgba(244, 63, 94, 0.4);
+    --primary-soft: rgba(244, 63, 94, 0.1);
+    --accent: #fbbf24;
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.08);
+}
+
+@layer base {
+  body {
+    background-color: var(--bg-darker);
+    color: var(--text-main);
+    @apply antialiased selection:bg-theme-soft selection:text-theme-primary transition-colors duration-500 overflow-x-hidden;
+  }
+}
+
+@layer components {
+  .glass-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    @apply rounded-dashboard backdrop-blur-md transition-all duration-500;
+  }
+  
+  .glass-header {
+    background-color: var(--bg-darker);
+    border-bottom: 1px solid var(--border-color);
+    @apply backdrop-blur-xl sticky top-0 z-50 transition-all duration-500;
+    opacity: 0.98;
+  }
+  
+  .btn-primary {
+    @apply bg-theme-primary text-black font-bold py-2 px-4 rounded-xl transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-theme-glow;
+    color: var(--bg-darker);
+  }
+
+  .icon-btn {
+    @apply w-11 h-11 flex items-center justify-center rounded-xl bg-white/5 transition-all relative;
+    color: var(--text-muted);
+  }
+  .icon-btn:hover {
+    color: var(--text-main);
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Indian Layout adjustments */
+  .text-amount {
+    font-variant-numeric: tabular-nums;
+  }
+}
